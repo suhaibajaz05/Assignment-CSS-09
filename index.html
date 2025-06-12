@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoPlatform</title>
+
+    <style>
+        body {
+            background-color: #eeeeee;
+            font-family: "Roboto", "Arial", sans-serif;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .leftbar {
+            width: 15%;
+            background-color: white;
+            padding: 10px 5px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            /* align-items: center; */
+            /* justify-content: center; */
+            border-radius: 13px;
+            /* border: 2px solid red; */
+        }
+
+        .leftbar .logo {
+            width: 70%;
+            margin: 10px auto;
+        }
+
+        .leftbar a {
+            height: 30px;
+            text-decoration: none;
+            color: gray;
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 10px;
+            /* border: 1px solid; */
+        }
+
+        .leftbar a:hover {
+            background-color: #eaeaea;
+        }
+
+        .leftbar a:active {
+            background-color: #909090;
+            color: white;
+        }
+
+        .leftbar .icon {
+            width: 12%;
+            margin-right: 10px;
+        }
+
+        .leftbar h4 {
+            font-size: 14px;
+            color: rgb(97, 97, 97);
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+            /* justify-content: left; */
+            padding: 0 10px;
+            margin-bottom: 5px;
+            /* border: 1px solid; */
+        }
+
+        .leftbar .icon2 {
+            width: 15%;
+            margin-right: 10px;
+            border-radius: 100%;
+        }
+
+        .right {
+            width: 85%;
+            margin-left: 10px;
+            display: flex;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* border: 1px solid blue; */
+
+        }
+
+        .top {
+            width: 100%;
+            height: 70px;
+            background-color: white;
+            /* border: 1px solid red; */
+            /* margin-left: 10px; */
+            padding: 10px 15px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .top .topbox {
+            background-color: #eaeaea;
+            width: 4%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin: 0 10px;
+        }
+
+        .top .icon {
+            width: 50%;
+        }
+
+        .top .topbox:hover {
+            background-color: #f0f0f0;
+        }
+
+        .top .topbox:active {
+            background-color: #909090;
+            color: white;
+        }
+
+        .top input {
+            background-color: #eaeaea;
+            width: 30%;
+            height: 40px;
+            /* display: flex; */
+            /* align-items: center; */
+            /* justify-content: center; */
+            border-radius: 8px;
+            margin: 0 100px;
+            padding: 0 10px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .nav {
+            padding: 5px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            height: 30px;
+            margin-top: 30px;
+            border-radius: 8px;
+            /* border: 1px solid red; */
+
+        }
+
+        .nav a {
+            background-color: white;
+            text-decoration: none;
+            color: gray;
+            /* display: flex; */
+            /* align-items: center; */
+            font-size: 14px;
+            font-weight: 500;
+            padding: 5px 10px;
+            margin: 0 3px;
+            border-radius: 8px;
+            /* border: 1px solid; */
+        }
+
+        .nav a:hover {
+            background-color: #eaeaea;
+        }
+
+        .nav a:active {
+            background-color: #2f2f2f;
+            color: white;
+        }
+
+        .main-videobox {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .videobox {
+            width: 22%;
+            /* height: 200px; */
+            /* border: 1px solid green; */
+            margin: 10px 5px 5px;
+            padding: 8px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .videobox .thumbnail {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .videobox .channeldpic {
+            width: 18%;
+            border-radius: 30%;
+            margin-top: -20px;
+            margin-left: 10px;
+            box-shadow: #ffffff29 0px 1px 4px, #ffffff 0px 0px 0px 3px;
+        }
+
+        .videobox h4 {
+            font-size: 15px;
+            margin-top: 5px;
+        }
+
+        .videobox p {
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="background-color: #f8d7da; color: #721c24; padding: 10px;">
+        This is an educational clone project. Not affiliated with any real website.
+    </div>
+
+    <div class="main">
+
+        <div class="leftbar">
+            <img src="logo.png" alt="" class="logo">
+
+            <nav>
+                <a href="#"> <img src="Assets/left/library.png" alt="" class="icon"> Library</a>
+                <a href="#"> <img src="Assets/left/history.png" alt="" class="icon"> History</a>
+                <a href="#"> <img src="Assets/left/your-videos.png" alt="" class="icon"> Your videos</a>
+                <a href="#"> <img src="Assets/left/watch-later.png" alt="" class="icon"> Watch later</a>
+                <a href="#"> <img src="Assets/left/liked-videos.png" alt="" class="icon"> Liked videos</a>
+                <a href="#"> <img src="Assets/down-arow.png" alt="" class="icon"> Show more</a>
+            </nav>
+
+            <h4>SUBSCRIPTIONS</h4>
+
+            <a href="#"> <img src="Images/1.jpeg" alt="" class="icon2"> MARWAN PABLO</a>
+            <a href="#"> <img src="Images/2.jpg" alt="" class="icon2"> Mamdouh NazrAllah</a>
+            <a href="#"> <img src="Images/3.jpg" alt="" class="icon2"> Elzero Web School</a>
+            <a href="#"> <img src="Images/4.png" alt="" class="icon2"> Mahmoud Abo El Ro..</a>
+            <a href="#"> <img src="Images/5.jpg" alt="" class="icon2"> MNEU</a>
+            <a href="#"> <img src="Images/6.jpg" alt="" class="icon2"> Show 70 more</a>
+
+            <h4>MORE FROM BRAVO</h4>
+
+            <a href="#"> <img src="Assets/left/your-videos.png" alt="" class="icon"> Bravo Premium</a>
+            <a href="#"> <img src="Assets/left/game.png" alt="" class="icon"> Gaming</a>
+            <a href="#"> <img src="Assets/left/live.png" alt="" class="icon"> Live</a>
+
+        </div>
+
+        <div class="right">
+
+            <div class="top">
+
+                <a href="#" class="topbox"> <img src="Assets/top/menu.png" alt="" class="icon"></a>
+                <a href="#" class="topbox"> <img src="Assets/top/home.png" alt="" class="icon"></a>
+                <a href="#" class="topbox"> <img src="Assets/top/trending.png" alt="" class="icon"></a>
+                <a href="#" class="topbox"> <img src="Assets/top/videos.png" alt="" class="icon"></a>
+
+                <input type="text" name="" id="" placeholder="Search">
+
+                <a href="#" class="topbox"> <img src="Assets/top/record.png" alt="" class="icon"></a>
+                <a href="#" class="topbox"> <img src="Assets/top/menu-dots.png" alt="" class="icon"></a>
+                <a href="#" class="topbox"> <img src="Assets/top/notification.png" alt="" class="icon"></a>
+                <a href="#" class="topbox"> <img src="Images/dp.jpg" alt="" class="icon"
+                        style="border-radius: 50%;"></a>
+
+            </div>
+
+            <div class="nav">
+                <a href="#" style="background-color: #2f2f2f; color: white;">All</a>
+                <a href="#">Stronghold Kingdoms</a>
+                <a href="#">Beats</a>
+                <a href="#">Ropping</a>
+                <a href="#">Inter</a>
+                <a href="#">JavaScript</a>
+                <a href="#">Live</a>
+                <a href="#">Mixes</a>
+                <a href="#">Music</a>
+                <a href="#">Music</a>
+                <a href="#">T-Series</a>
+                <a href="#">Albums</a>
+                <a href="#">Movie musicals</a>
+                <a href="#">News</a>
+            </div>
+
+            <div class="main-videobox">
+
+                <div class="videobox">
+                    <img src="thumbnails/1.jpg" alt="" class="thumbnail">
+                    <img src="Images/7.jpg" alt="" class="channeldpic">
+                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, est.</h4>
+                    <p>Green Gaming Productions
+                        <br>
+                        22M views - 3 years ago
+                    </p>
+                </div>
+
+                <div class="videobox">
+                    <img src="thumbnails/2.avif" alt="" class="thumbnail">
+                    <img src="Images/8.jpg" alt="" class="channeldpic">
+                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, est.</h4>
+                    <p>Green Gaming Productions
+                        <br>
+                        22M views - 3 years ago
+                    </p>
+                </div>
+
+                <div class="videobox">
+                    <img src="thumbnails/3.jpeg" alt="" class="thumbnail">
+                    <img src="Images/9.jpg" alt="" class="channeldpic">
+                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, est.</h4>
+                    <p>Green Gaming Productions
+                        <br>
+                        22M views - 3 years ago
+                    </p>
+                </div>
+
+                <div class="videobox">
+                    <img src="thumbnails/4.jpg" alt="" class="thumbnail">
+                    <img src="Images/2.jpg" alt="" class="channeldpic">
+                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, est.</h4>
+                    <p>Green Gaming Productions
+                        <br>
+                        22M views - 3 years ago
+                    </p>
+                </div>
+
+                <div class="videobox">
+                    <img src="thumbnails/5.webp" alt="" class="thumbnail">
+                    <img src="Images/11.webp" alt="" class="channeldpic">
+                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, est.</h4>
+                    <p>Green Gaming Productions
+                        <br>
+                        22M views - 3 years ago
+                    </p>
+                </div>
+
+                <div class="videobox">
+                    <img src="thumbnails/6.jpg" alt="" class="thumbnail">
+                    <img src="Images/12.webp" alt="" class="channeldpic">
+                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, est.</h4>
+                    <p>Green Gaming Productions
+                        <br>
+                        22M views - 3 years ago
+                    </p>
+                </div>
+
+                <div class="videobox">
+                    <img src="thumbnails/7.png" alt="" class="thumbnail">
+                    <img src="Images/13.webp" alt="" class="channeldpic">
+                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, est.</h4>
+                    <p>Green Gaming Productions
+                        <br>
+                        22M views - 3 years ago
+                    </p>
+                </div>
+
+                <div class="videobox">
+                    <img src="thumbnails/8.webp" alt="" class="thumbnail">
+                    <img src="Images/1.jpeg" alt="" class="channeldpic">
+                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, est.</h4>
+                    <p>Green Gaming Productions
+                        <br>
+                        22M views - 3 years ago
+                    </p>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
